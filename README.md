@@ -18,6 +18,7 @@ These are listed in the order we suggest you write them, but it's possible to sk
 ## Grading
 
 * **(6)** Completion of each method in the above list (one point each)
+* **(2)** Methods are combined appropriately to avoid duplication of code
 * **(1)** Repository has several logical commits with descriptive messages
 * **(1)** Code uses correct indentation/style and descriptive variable names
 
