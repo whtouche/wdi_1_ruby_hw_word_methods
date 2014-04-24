@@ -27,4 +27,23 @@ def word_frequencies(text)
   frequencies
 end
 
+def most_common_word(text, length_threshold: 3)
+  # More compact version but also more complex
+  # frequencies = word_frequencies(text)
+  # frequencies.delete_if{ |word, frequency| word.length <= length_threshold }
+  # frequencies.max_by{ |word, frequency| frequency }
+
+  highest_frequency = 0
+  most_common = nil
+
+  word_frequencies(text).each do |word, frequency|
+    if word.length > length_threshold && frequency > highest_frequency
+      highest_frequency = frequency
+      most_common = word
+    end
+  end
+
+  most_common
+end
+
 binding.pry
