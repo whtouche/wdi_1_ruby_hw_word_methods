@@ -19,4 +19,12 @@ def word_count(text, unique: false)
   end
 end
 
+def word_frequencies(text)
+  frequencies = Hash.new(0)
+  normalized_words(text).each do |word|
+    frequencies[word] += 1
+  end
+  frequencies
+end
+
 binding.pry
