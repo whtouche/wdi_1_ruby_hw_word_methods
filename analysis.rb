@@ -7,4 +7,8 @@ def normalized_words(text)
   text.downcase.gsub(/[^a-z]/, ' ').split
 end
 
+def unique_words(text)
+  normalized_words(text).uniq
+end
+
 binding.pry
