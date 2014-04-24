@@ -11,4 +11,12 @@ def unique_words(text)
   normalized_words(text).uniq
 end
 
+def word_count(text, unique: false)
+  if unique
+    unique_words(text).count
+  else
+    normalized_words(text).count
+  end
+end
+
 binding.pry
