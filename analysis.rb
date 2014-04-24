@@ -46,4 +46,10 @@ def most_common_word(text, length_threshold: 3)
   most_common
 end
 
+def longest_words(text)
+  words_by_length = unique_words(text).group_by{ |word| word.length }
+  length_of_longest_word = words_by_length.keys.sort.last
+  words_by_length[length_of_longest_word]
+end
+
 binding.pry
