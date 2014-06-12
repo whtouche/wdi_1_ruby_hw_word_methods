@@ -8,7 +8,7 @@
 
 =end
 
-
+sample = "This (is) my-my sample string is a string!"
 
 # This will give you the contents of the `sample.txt` file as one big string
 sample_text = File.read('sample.txt')
@@ -26,10 +26,11 @@ end
 # check word against array
 # if it's not there, put it there
 # if it is there, on to the next one
-def string_to_array
-
+def string_to_array(string)
+  array = string.split.uniq
 end
-
+print string_to_array(normalize(sample))
+puts
 
 
 # #4
@@ -44,4 +45,4 @@ def count_words(string)
     return frequency
 end
 
-puts count_words(normalize("This! (string) this-this string is a"))
+#puts count_words(normalize("This! (string) this-this string is a")) #
