@@ -29,7 +29,7 @@ end
 def string_to_array(string)
   array = string.split.uniq
 end
-print string_to_array(normalize(sample))
+print string_to_array(sample)
 puts
 
 
@@ -40,7 +40,7 @@ puts
 
 def count_words(string)
   words = string.split(' ')
-    frequency = Hash.new(0)
+    frequency = Hash.new(0) # number to start counting at
     words.each { |word| frequency[word] += 1 } # removed .downcase assuming method 1
     return frequency
 end
