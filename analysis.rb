@@ -15,9 +15,9 @@ sample_text = File.read('sample.txt')
 
 # #1
 def normalize(string)
-  string.downcase.gsub(/[^\w\s\d]/, '')
+  string.downcase.gsub(/[^a-z\s]/, '')
 end
-puts normalize(sample_text)
+#puts normalize(sample_text)
 
 # #2
 # pass string (.split into array?)
@@ -44,4 +44,4 @@ def count_words(string)
     return frequency
 end
 
-puts count_words("This string this this string is a")
+puts count_words(normalize("This! (string) this-this string is a"))
